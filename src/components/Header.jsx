@@ -1,43 +1,86 @@
 import { Link } from "react-router-dom";
+import { CircleUserRound, Moon, Settings, Languages } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
+  const [profilePopUp, setprofilePopUp] = useState();
+
   return (
     <nav className="flex justify-between items-center bg-black h-16 text-red-600 font-dosis font-semibold w-full sticky top-0">
-      <Link to="/jkt48/home" className="w-44 text-3xl text-center">
+      <Link
+        to="/jkt48/"
+        className="w-48 text-3xl text-center"
+        onClick={() => setprofilePopUp(undefined)}
+      >
         <span className="cursor-pointer font-abel">JKT48</span>
       </Link>
       <div className="flex gap-8">
         <Link
+          onClick={() => setprofilePopUp(undefined)}
           to="/jkt48/schedule"
           className="cursor-pointer border-b-2 border-black hover:border-red-600 "
         >
           SCHEDULE
         </Link>
         <Link
+          onClick={() => setprofilePopUp(undefined)}
           to="/jkt48/member"
           className="cursor-pointer border-b-2 border-black hover:border-red-600"
         >
           MEMBER
         </Link>
         <Link
+          onClick={() => setprofilePopUp(undefined)}
           to="/jkt48/theater"
           className="cursor-pointer border-b-2 border-black hover:border-red-600"
         >
           THEATER
         </Link>
         <Link
+          onClick={() => setprofilePopUp(undefined)}
           to="/jkt48/merchandise"
           className="cursor-pointer border-b-2 border-black hover:border-red-600"
         >
           MERCHANDISE
         </Link>
       </div>
-      <div className="flex gap-4 w-44 justify-center items-center">
-        <div>SIGN IN</div>
-        <div className="bg-red-600 rounded-xl text-white px-5 py-1 cursor-pointer">
-          SIGN UP
+      <div className="flex gap-4 w-52 justify-center items-center ">
+        <div>Ohaiyou, Dimas !</div>
+        <div className="text-red-600 cursor-pointer">
+          <CircleUserRound
+            size={40}
+            onClick={() => setprofilePopUp(!profilePopUp)}
+          />
         </div>
       </div>
+      {profilePopUp && (
+        <div className="absolute top-14 right-6 h-72 w-56 border-2 border-black shadow-2xl bg-white rounded-xl flex flex-col justify-center items-center font-abel gap-2">
+          <div>DIMAS FIRMANSYAH</div>
+          <CircleUserRound size={72} className="text-black" />
+          <div className="text-xs">fdimas157@gmail.com</div>
+          <div className="flex gap-2 text-white">
+            <Moon
+              size={28}
+              className="bg-red-600 p-1 rounded-2xl cursor-pointer"
+            />
+            <Settings
+              size={28}
+              className="bg-red-600 p-1 rounded-2xl cursor-pointer"
+            />
+            <Languages
+              size={28}
+              className="bg-red-600 p-1 rounded-2xl cursor-pointer"
+            />
+          </div>
+          <Link
+            to={"/jkt48/profile"}
+            className="flex justify-center items-center rounded-lg bg-red-600 text-white w-40 h-8 cursor-pointer my-2 border-2 border-black"
+            onClick={() => setprofilePopUp(undefined)}
+          >
+            Ceck Your Profile
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }

@@ -8,6 +8,7 @@ import Member from "./pages/Member.jsx";
 import Merchandise from "./pages/Merchandise.jsx";
 import Schedule from "./pages/Schedule.jsx";
 import Theater from "./pages/Theater.jsx";
+import Profile from "./pages/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/jkt48/home",
+        path: "/jkt48/",
         element: <Home />,
       },
       {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/jkt48/theater",
         element: <Theater />,
+      },
+      {
+        path: "/jkt48/profile",
+        element: <Profile />,
       },
     ],
   },
