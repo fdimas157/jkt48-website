@@ -1,11 +1,57 @@
 export default function Profile() {
+  const members = [
+    {
+      id: 1,
+      name: "Reva Fidela",
+      nickName: "Adel",
+      image: "/src/assets/member/oshi-adel.jpg",
+    },
+    {
+      id: 2,
+      name: "Azizi Asadel",
+      nickName: "Zee",
+      image: "/src/assets/member/oshi-zee.jpg",
+    },
+    {
+      id: 3,
+      name: "Shani Indira Natio",
+      nickName: "Shani",
+      image: "/src/assets/member/oshi-shani.jpg",
+    },
+    {
+      id: 4,
+      name: "Marsha Lenathea",
+      nickName: "Marsha",
+      image: "/src/assets/member/oshi-marsha.jpg",
+    },
+    {
+      id: 5,
+      name: "Freyana Jayawardhana",
+      nickName: "Freya",
+      image: "/src/assets/member/oshi-freya.jpg",
+    },
+  ];
+
+  const user = {
+    id: 1,
+    noIdentity: "3279022505030002",
+    name: "Dimas Firmansyah",
+    nickName: "Dimas",
+    birth: "25-05-2003",
+    oshimen: members[0],
+    phone: "087735495185",
+    email: "dimas@gmail.com",
+    password: "12345678",
+    gender: "Laki-Laki",
+  };
+
   return (
     <>
       <main className="flex p-4">
         <div className="w-5/12 p-4">
           <img
             className="w-full rounded-lg"
-            src="/src/assets/profile/oshi-adel.jpg"
+            src={user.oshimen.image}
             alt="Oshi"
           />
         </div>
@@ -25,7 +71,7 @@ export default function Profile() {
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Anggota yang paling disukai (Oshimen)</td>
-                <td className="">Reva Fidela</td>
+                <td className="">{user.oshimen.name}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Jumlah kedatangan thetaer</td>
@@ -66,55 +112,41 @@ export default function Profile() {
             <table className="font-dosis font-bold text-md justify-start">
               <tr className="border-b-2 border-gray-200">
                 <td className="w-2/5 p-4">Email</td>
-                <td className="">fdimas157@gmail.com</td>
+                <td className="">{user.email}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Kata Sandi</td>
-                <td className="">*************</td>
+                <td className="">{user.password}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Nama Lengkap</td>
-                <td className="">Dimas Firmansyah</td>
+                <td className="">{user.name}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
-                <td className="p-4">Nama Panggilan</td>
-                <td className="">Dimas</td>
+                <td className="p-4">{user.nickName}</td>
+                <td className="">{user.nickName}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Anggota yang paling disukai (Oshimen)</td>
-                <td className="">JKT48 Reva Fidela</td>
+                <td className="">{user.oshimen.name}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Jenis Kelamin</td>
-                <td className="flex gap-8 items-center flex-row p-4 px-0">
-                  <label htmlFor="male" className="flex gap-2">
-                    <input type="radio" name="male" />
-                    Laki - Laki
-                  </label>
-                  <label htmlFor="female" className="flex gap-2">
-                    <input type="radio" name="female" />
-                    Perempuan
-                  </label>
-                </td>
+                <td>{user.gender}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">Tanggal Lahir</td>
-                <td className="p-2">
-                  <input
-                    type="date"
-                    onChange={(e) => console.log(e.target.value)}
-                  />
-                </td>
+                <td>{user.birth}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">
                   Nomor Identitas <br /> (KTP, Kartu Pelajar, SIM, atau paspor)
                 </td>
-                <td className="p-2">3279022505030002</td>
+                <td>{user.noIdentity}</td>
               </tr>
               <tr className="border-b-2 border-gray-200">
                 <td className="p-4">No. Handphone</td>
-                <td className="p-2">087735495185</td>
+                <td>{user.phone}</td>
               </tr>
               <tr>
                 <td className="p-4 text-center" colSpan={2}>
