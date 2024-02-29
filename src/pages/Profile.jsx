@@ -43,7 +43,7 @@ export default function Profile() {
     noIdentity: "3279022505030002",
     name: "Dimas Firmansyah",
     nickName: "Dimas",
-    birth: "25-05-2003",
+    birth: "2003-05-25",
     oshimen: members[0],
     phone: "087735495185",
     email: "dimas@gmail.com",
@@ -55,7 +55,7 @@ export default function Profile() {
     <>
       {openPopUp && (
         <div className="bg-black bg-opacity-80 w-full h-screen fixed top-0 p-0 m-0 flex justify-center items-center">
-          <div className="bg-white w-3/4 h-3/4 rounded-xl p-2">
+          <div className="flex flex-col items-center justify-between bg-white w-3/4 h-3/4 rounded-xl p-2">
             <XCircle
               className="bg-white text-red-600 rounded-full absolute top-16 right-36 cursor-pointer p-0.5"
               size={42}
@@ -69,9 +69,9 @@ export default function Profile() {
             </div>
             <form
               action="#"
-              className="flex gap-4 w-full p-2 font-abel font-bold"
+              className="flex gap-4 w-full p-2 font-abel font-bold pb-8"
             >
-              <div className="flex w-full flex-wrap gap-4">
+              <div className="flex items-center justify-center w-full flex-wrap gap-4">
                 <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
                   Nama Lengkap
                   <input
@@ -88,19 +88,71 @@ export default function Profile() {
                     className="p-2 border-2 border-black w-full rounded-lg"
                   />
                 </label>
-                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
-                  Jenis Kelamin
-                  <div className="flex flex-row gap-8 w-full px-1">
-                    <label htmlFor="">
-                      <input type="radio" /> Laki-Laki
-                    </label>
-                    <label htmlFor="">
-                      <input type="radio" /> Perempuan
-                    </label>
+                <label htmlFor="" className="flex gap-16 w-full px-1">
+                  <div className="flex flex-col gap-2">
+                    Jenis Kelamin
+                    <div className="flex flex-row gap-8 w-full px-1">
+                      <label htmlFor="">
+                        <input type="radio" /> Laki-Laki
+                      </label>
+                      <label htmlFor="">
+                        <input type="radio" /> Perempuan
+                      </label>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    Tanggal Lahir
+                    <input type="date" value={user.birth} />
                   </div>
                 </label>
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  No. Identitas
+                  <input
+                    type="text"
+                    value={user.noIdentity}
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  />
+                </label>
               </div>
-              <div className="bg-gray-400 w-full h-full">ss</div>
+              <div className="flex items-center justify-center w-full flex-wrap gap-4">
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  Email
+                  <input
+                    type="text"
+                    value={user.email}
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  />
+                </label>
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  Password
+                  <input
+                    type="password"
+                    value={user.password}
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  />
+                </label>
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  No. Handphone
+                  <input
+                    type="text"
+                    value={user.phone}
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  />
+                </label>
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  Oshimen
+                  <select
+                    name=""
+                    id=""
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  >
+                    <option value="">Reva Fidela</option>
+                    <option value="">Reva Fidela</option>
+                    <option value="">Reva Fidela</option>
+                    <option value="">Reva Fidela</option>
+                  </select>
+                </label>
+              </div>
             </form>
           </div>
         </div>
