@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         dosis: ['"Dosis", sans-serif'],
         abel: ['"Abel", sans-serif'],
+        colorPopUp: "rgb(0, 0, 0, 0.8)",
       },
     },
   },
