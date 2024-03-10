@@ -42,7 +42,6 @@ export default function Profile() {
     id: 1,
     noIdentity: "3279022505030002",
     name: "Dimas Firmansyah",
-    nickName: "Dimas",
     birth: "2003-05-25",
     oshimen: members[0],
     phone: "087735495185",
@@ -80,14 +79,6 @@ export default function Profile() {
                     className="p-2 border-2 border-black w-full rounded-lg"
                   />
                 </label>
-                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
-                  Nama Panggilan
-                  <input
-                    type="text"
-                    value={user.nickName}
-                    className="p-2 border-2 border-black w-full rounded-lg"
-                  />
-                </label>
                 <label htmlFor="" className="flex gap-16 w-full px-1">
                   <div className="flex flex-col gap-2">
                     Jenis Kelamin
@@ -113,6 +104,14 @@ export default function Profile() {
                     className="p-2 border-2 border-black w-full rounded-lg"
                   />
                 </label>
+                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
+                  No. Handphone
+                  <input
+                    type="text"
+                    value={user.phone}
+                    className="p-2 border-2 border-black w-full rounded-lg"
+                  />
+                </label>
               </div>
               <div className="flex items-center justify-center w-full flex-wrap gap-4">
                 <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
@@ -132,14 +131,6 @@ export default function Profile() {
                   />
                 </label>
                 <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
-                  No. Handphone
-                  <input
-                    type="text"
-                    value={user.phone}
-                    className="p-2 border-2 border-black w-full rounded-lg"
-                  />
-                </label>
-                <label htmlFor="" className="flex flex-col gap-2 w-full px-1">
                   Oshimen
                   <select
                     name=""
@@ -147,11 +138,25 @@ export default function Profile() {
                     className="p-2 border-2 border-black w-full rounded-lg"
                   >
                     <option value="">Reva Fidela</option>
-                    <option value="">Reva Fidela</option>
-                    <option value="">Reva Fidela</option>
-                    <option value="">Reva Fidela</option>
+                    <option value="">Azizi Shafa Asadel</option>
+                    <option value="">Shani Indira Natio</option>
+                    <option value="">Freyana Jayawardhana</option>
                   </select>
                 </label>
+                <div className="flex flex-row gap-2 w-full px-1">
+                  <button
+                    className=" bg-red-600 h-12 rounded-lg text-white w-full"
+                    onClick={() => setOpenPopUp(!openPopUp)}
+                  >
+                    Batal
+                  </button>
+                  <button 
+                    className=" bg-red-600 h-12 rounded-lg text-white w-full"
+                    onClick={() => setOpenPopUp(!openPopUp)}
+                  >
+                    Simpan
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -232,10 +237,6 @@ export default function Profile() {
                 <tr className="border-b-2 border-gray-200">
                   <td className="p-4">Nama Lengkap</td>
                   <td className="">{user.name}</td>
-                </tr>
-                <tr className="border-b-2 border-gray-200">
-                  <td className="p-4">{user.nickName}</td>
-                  <td className="">{user.nickName}</td>
                 </tr>
                 <tr className="border-b-2 border-gray-200">
                   <td className="p-4">Anggota yang paling disukai (Oshimen)</td>
