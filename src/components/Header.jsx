@@ -94,7 +94,7 @@ export default function Header({ backgroundHeader, setBackgroundHeader }) {
         </div>
       </div>
       {profilePopUp && (
-        <div className="absolute top-14 right-6 h-72 w-56 border-2 border-black shadow-2xl bg-white rounded-xl flex flex-col justify-center items-center font-abel gap-2">
+        <div className="absolute top-14 right-6 h-80 w-56 border-2 border-black shadow-2xl bg-white rounded-xl flex flex-col justify-center items-center font-abel gap-2">
           <div>DIMAS FIRMANSYAH</div>
           <CircleUserRound size={72} className="text-black" />
           <div className="text-xs">fdimas157@gmail.com</div>
@@ -122,6 +122,9 @@ export default function Header({ backgroundHeader, setBackgroundHeader }) {
           >
             Ceck Your Profile
           </Link>
+          <div className="flex justify-center items-center cursor-pointer">
+            Logout
+          </div>
         </div>
       )}
     </nav>
