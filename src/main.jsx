@@ -9,6 +9,7 @@ import Merchandise from "./pages/Merchandise.jsx";
 import Schedule from "./pages/Schedule.jsx";
 import Theater from "./pages/Theater.jsx";
 import Profile from "./pages/Profile.jsx";
+import Login from "./pages/Login.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
     ],
+  },
+  {
+    path: "/jkt48/login",
+    element: <Login />,
   },
 ]);
 
