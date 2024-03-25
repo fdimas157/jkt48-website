@@ -1,4 +1,4 @@
-#JKT48 WEBSITE
-#####By: Dimas Firmansyah
+# JKT48 WEBSITE
+##### By: Dimas Firmansyah
 
 Insyaallah rampung
