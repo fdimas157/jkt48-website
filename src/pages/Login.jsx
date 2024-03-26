@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
-      <div className="w-full">
-        <img src="/src/assets/background/login-bg.jpg" alt="login-bg" />
+      <div className="w-full fixed">
+        <img src="/src/assets/background/login-bg.jpeg" alt="login-bg" />
       </div>
-      <div className="w-full h-screen absolute top-0 left-0 ">
+      <main className="w-full h-screen absolute top-0 left-0 ">
         <div className="flex flex-row">
           <div className="flex h-screen w-7/12 items-start p-16 flex-col justify-center gap-4">
             <div className="font-outfit text-white text-3xl font-semibold">
@@ -57,14 +57,16 @@ export default function Login() {
                   </button>
                   <div className="text-white flex gap-2 font-outfit">
                     Belum punya akun?
-                    <Link className="underline">Daftar</Link>
+                    <Link to={"/jkt48/register"} className="underline">
+                      Daftar
+                    </Link>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

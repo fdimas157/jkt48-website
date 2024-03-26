@@ -10,6 +10,7 @@ import Schedule from "./pages/Schedule.jsx";
 import Theater from "./pages/Theater.jsx";
 import Profile from "./pages/Profile.jsx";
 import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/jkt48/login",
     element: <Login />,
+  },
+  {
+    path: "/jkt48/register",
+    element: <Register />,
   },
 ]);
 
