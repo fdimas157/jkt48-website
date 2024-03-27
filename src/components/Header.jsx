@@ -8,7 +8,7 @@ export default function Header({ backgroundHeader, setBackgroundHeader }) {
 
   return (
     <nav
-      className={`flex justify-between items-center h-16  font-dosis font-semibold w-full sticky top-0 ${
+      className={`flex justify-between items-center h-16  font-dosis font-semibold w-full  ${
         backgroundHeader ? "bg-black text-red-600" : "bg-red-600 text-white"
       }`}
     >

@@ -52,8 +52,8 @@ export default function Login() {
                       Lupa Password?
                     </span>
                   </label>
-                  <button className="bg-white border-none h-10 rounded-lg font-dosis font-bold  text-xl w-1/2">
-                    <Link to={"/jkt48/"}>Masuk</Link>
+                  <button className="bg-white border-none h-10 rounded-lg font-outfit font-bold text-lg w-3/4">
+                    <Link to={"/jkt48/"}>MASUK</Link>
                   </button>
                   <div className="text-white flex gap-2 font-outfit">
                     Belum punya akun?
