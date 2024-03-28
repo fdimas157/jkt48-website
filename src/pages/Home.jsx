@@ -1,4 +1,40 @@
+import { FaSpotify } from "react-icons/fa";
+import { SiYoutubemusic, SiApplemusic } from "react-icons/si";
+
 export default function Home() {
+  const singles = [
+    {
+      id: 1,
+      name: "Aturan Anti Cinta",
+      image: "/src/assets/cover/aturan-anti-cinta.jpg",
+    },
+    {
+      id: 2,
+      name: "Mahagita",
+      image: "/src/assets/cover/mahagita.jpg",
+    },
+    {
+      id: 3,
+      name: "Pajama Drive",
+      image: "/src/assets/cover/pajama-drive.jpg",
+    },
+    {
+      id: 4,
+      name: "Matahari Milikku",
+      image: "/src/assets/cover/matahari-milikku.jpg",
+    },
+    {
+      id: 5,
+      name: "Flying High",
+      image: "/src/assets/cover/flying-high.jpg",
+    },
+    {
+      id: 6,
+      name: "Gadis Remaja",
+      image: "/src/assets/cover/gadis-remaja.jpg",
+    },
+  ];
+
   return (
     <>
       <main className="flex flex-col items-center justify-center bg-black">
@@ -42,10 +78,11 @@ export default function Home() {
             alt="side-bg"
             className="w-3/4"
           />
-        </div><div className="w-full bg-black text-white p-4">
-          <div className="absolute left-0 w-6/12 h-3/4 p-12 font-outfit flex flex-col justify-center gap-4 text-right">
+        </div>
+        <div className="w-full bg-black text-white p-4 flex flex-row justify-end">
+          <div className="absolute left-0 w-6/12 h-3/4 p-12 font-outfit flex flex-col justify-center gap-4 text-left">
             <div className="text-4xl font-bold ">
-              Tumbuh dan Berkembang Bersama Fans
+              Wujudkan Impianmu Bersama Kami
             </div>
             <div className="text-red-600 font-medium text-sm">
               - JKT48 NEW ERA -
@@ -65,6 +102,58 @@ export default function Home() {
             src="/src/assets/background/side-home-2.png"
             alt="side-bg"
             className="w-3/4"
+          />
+        </div>
+        <div className="flex flex-row justify-center items-center gap-6 flex-wrap w-full">
+          {singles.map((s) => (
+            <div
+              className="flex flex-col gap-4 w-44 h-80 p-2 border-2 border-red-600 rounded-lg justify-center"
+              key={s.id}
+            >
+              <img src={s.image} alt={s.name} className="rounded-md" />
+              <div className="font-outfit text-center text-white font-bold">
+                {s.name} <br />{" "}
+                <span className="font-dosis text-xs font-normal">
+                  Nikmati di
+                </span>
+              </div>
+              <div className="flex flex-row gap-4 justify-center items-center text-3xl">
+                <FaSpotify
+                  className=" text-green-700 cursor-pointer"
+                  title="Spotify"
+                />
+                <SiApplemusic
+                  className="text-white cursor-pointer"
+                  title="Apple Music"
+                />
+                <SiYoutubemusic
+                  className="text-3xl text-red-600 cursor-pointer"
+                  title="Youtube"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-5xl text-white font-outfit font-bold p-12 pb-6">
+          - JKT48 NEW ERA -
+        </div>
+        <div className="w-full p-4">
+          <img
+            src="/src/assets/background/main-article.png"
+            alt=""
+            className="w-full"
+          />
+        </div>
+        <div className="flex flex-row w-full p-2">
+          <img
+            src="/src/assets/background/article-2.jpg"
+            alt=""
+            className="w-1/2 p-2"
+          />
+          <img
+            src="/src/assets/background/article-3.jpg"
+            alt=""
+            className="w-1/2 p-2"
           />
         </div>
       </main>
