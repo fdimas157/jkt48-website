@@ -122,9 +122,12 @@ export default function Header({ backgroundHeader, setBackgroundHeader }) {
           >
             Ceck Your Profile
           </Link>
-          <div className="flex justify-center items-center cursor-pointer">
+          <Link
+            to={"/jkt48/login"}
+            className="flex justify-center items-center cursor-pointer"
+          >
             Logout
-          </div>
+          </Link>
         </div>
       )}
     </nav>

@@ -146,12 +146,12 @@ export default function Home() {
         </div>
         <div className="flex flex-row w-full p-2">
           <img
-            src="/src/assets/background/article-2.jpg"
+            src="/src/assets/background/article-2.png"
             alt=""
             className="w-1/2 p-2"
           />
           <img
-            src="/src/assets/background/article-3.jpg"
+            src="/src/assets/background/article-3.png"
             alt=""
             className="w-1/2 p-2"
           />
