@@ -341,10 +341,10 @@ export default function Member() {
               <div className="flex justify-start items-center h-16 px-6 bg-red-600 w-full text-white font-abel font-bold rounded-lg text-2xl">
                 JKT48 NEW GENERATION
               </div>
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-wrap justify-center gap-5">
                 {newGenerations.map((m) => (
                   <div
-                    className="w-36 rounded-lg border-4 border-red-600 cursor-pointer"
+                    className="w-32 rounded-lg border-4 border-red-600 cursor-pointer"
                     key={m.id}
                   >
                     <img src={m.image} alt={m.name} className="rounded-lg" />
