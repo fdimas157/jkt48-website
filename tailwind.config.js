@@ -9,6 +9,8 @@ export default {
         abel: ['"Abel", sans-serif'],
         colorPopUp: "rgb(0, 0, 0, 0.8)",
         outfit: ['"Outfit", sans-serif'],
+        ptsans: ['"PT Sans", sans-serif'],
+        reddit: ['"Reddit Mono", monospace']
       },
     },
   },
