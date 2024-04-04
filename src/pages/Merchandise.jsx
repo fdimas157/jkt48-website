@@ -82,7 +82,7 @@ export default function Merchandise() {
               {p.nameProduct}
             </div>
             <div className="font-reddit text-center font-bold text-sm text-red-600">
-              <s className="text-black">Rp. 125.000</s> {p.price}
+              <s className="text-black">Rp. 125.000</s> Rp. {p.price}
             </div>
           </div>
         ))}

@@ -1,46 +1,114 @@
+import { useState } from "react";
 import SideNews from "../components/SideNews";
 import SideSchedule from "../components/SideSchedule";
+import PopUpMember from "../components/PopUpMember";
 
 export default function Member() {
+  const [popUpMember, setPopUpMember] = useState();
+  const [popUpDataMember, setPopUpDataMember] = useState({});
   const members = [
     {
       id: 1,
       name: "Amanda Sukma",
+      birthDay: "17 Desember 2004",
+      blood: "O",
+      horoscop: "Sagitarius",
+      tall: "160 Cm",
+      nickName: "Amanda",
+      imagePopUp: "/src/assets/member/oshi-amanda.jpg",
       image: "/src/assets/kabesha/amanda.jpg",
+      twitter: "",
+      instagram: "",
     },
     {
       id: 2,
       name: "Angelina Christy",
+      birthDay: "5 Desember 2005",
+      blood: "O",
+      horoscop: "Sagitarius",
+      tall: "163 Cm",
+      nickName: "Christy",
+      imagePopUp: "/src/assets/member/oshi-christy.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/christy.jpg",
     },
     {
       id: 3,
       name: "Aurellia",
+      birthDay: "29 Oktober 2002",
+      blood: "O",
+      horoscop: "Scorpio",
+      tall: "155 Cm",
+      nickName: "Lia",
+      imagePopUp: "/src/assets/member/oshi-lia.jpg",
       image: "/src/assets/kabesha/lia.jpg",
+      twitter: "",
+      instagram: "",
     },
     {
       id: 4,
       name: "Azizi Asadel",
+      birthDay: "16 Mei 2006",
+      blood: "O",
+      horoscop: "Taurus",
+      tall: "162 Cm",
+      nickName: "Zee",
+      imagePopUp: "/src/assets/member/oshi-zee.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/zee.jpg",
     },
     {
       id: 5,
       name: "Callista Alifia",
+      birthDay: "8 Agustus 2005",
+      blood: "O",
+      horoscop: "Leo",
+      tall: "157 Cm",
+      nickName: "Callie",
+      imagePopUp: "/src/assets/member/oshi-callie.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/callie.jpg",
     },
     {
       id: 6,
       name: "Cornelia Vanisa",
+      birthDay: "26 Juli 2002",
+      blood: "O",
+      horoscop: "Leo",
+      tall: "162 Cm",
+      nickName: "Oniel",
+      imagePopUp: "/src/assets/member/oshi-oniel.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/oniel.jpg",
     },
     {
       id: 7,
       name: "Febriola Sinambela",
+      birthDay: "26 Februari 2005",
+      blood: "B",
+      horoscop: "Pisces",
+      tall: "154 Cm",
+      nickName: "Olla",
+      imagePopUp: "/src/assets/member/oshi-olla.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/olla.jpg",
     },
     {
       id: 8,
       name: "Feni Fitriyanti",
+      birthDay: "16 Januari 1999",
+      blood: "O",
+      horoscop: "Capricon",
+      tall: "162 Cm",
+      nickName: "Feni",
+      imagePopUp: "/src/assets/member/oshi-feni.jpg",
+      twitter: "",
+      instagram: "",
       image: "/src/assets/kabesha/feni.jpg",
     },
     {
@@ -314,6 +382,10 @@ export default function Member() {
                   <div
                     className="w-32 bg-red-600 rounded-lg border-4 border-red-600 cursor-pointer"
                     key={m.id}
+                    onClick={() => {
+                      setPopUpMember(!popUpMember);
+                      setPopUpDataMember(m);
+                    }}
                   >
                     <img src={m.image} alt={m.name} className="rounded-lg" />
                     <div className="font-outfit text-white h-8 flex justify-center items-center font-semibold text-xs">
@@ -358,6 +430,13 @@ export default function Member() {
           </div>
         </div>
       </main>
+      {popUpMember && (
+        <PopUpMember
+          popUpMember={popUpMember}
+          setPopUpMember={setPopUpMember}
+          popUpDataMember={popUpDataMember}
+        />
+      )}
     </>
   );
 }
