@@ -1,4 +1,10 @@
+import { useState } from "react";
+import PopUpProduct from "../components/PopUpMerchandise";
+
 export default function Merchandise() {
+  const [popUpProduct, setPopUpProduct] = useState();
+  const [popUpDataProduct, setPopUpDataProduct] = useState({});
+
   const tShirt = [
     {
       id: 1,
@@ -72,11 +78,18 @@ export default function Merchandise() {
       </div>
       <div className="flex flex-wrap gap-4 justify-center items-center">
         {tShirt.map((p) => (
-          <div className="w-56 flex flex-col gap-2" key={p.id}>
+          <div
+            className="w-56 flex flex-col gap-2 cursor-pointer"
+            key={p.id}
+            onClick={() => {
+              setPopUpProduct(!popUpProduct);
+              setPopUpDataProduct(p);
+            }}
+          >
             <img
               src={p.image}
               alt={p.nameProduct}
-              className="w-full border-b-2 border-black"
+              className="w-full border-b-2 border-black hover:border-red-600 hover:border-2"
             />
             <div className="font-ptsans text-center text-sm">
               {p.nameProduct}
@@ -87,6 +100,13 @@ export default function Merchandise() {
           </div>
         ))}
       </div>
+      {popUpProduct && (
+        <PopUpProduct
+          popUpProduct={popUpProduct}
+          setPopUpProduct={setPopUpProduct}
+          popUpDataProduct={popUpDataProduct}
+        />
+      )}
     </main>
   );
 }
